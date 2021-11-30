@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Baseball</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assign10.css">
+    <script src="assign10.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Baseball Order List</h1>
+    </header>
+    <section id="main">
+      <form action="assign10.php" id="form" onreset="resetData()" onsubmit="return validateForm();" method="GET">
+        <table>
+          <tr><td>Price:</td></tr>
+          <tr><td><label class="switch"><input type="checkbox" name="item[]" value="145" onclick="totalPrice()" class="item"><span class="slider"></span></label>Yankees Jersey $145.00</td></tr>
+          <tr><td><label class="switch"><input type="checkbox" name="item[]" value="133" onclick="totalPrice()" class="item"><span class="slider"></span></label>Boston Jersey $133.00</td></tr>
+          <tr><td><label class="switch"><input type="checkbox" name="item[]" value="113" onclick="totalPrice()" class="item"><span class="slider"></span></label>World Series ball game $113.00</td></tr>
+          <tr><td><label class="switch"><input type="checkbox" name="item[]" value="50" onclick="totalPrice()" class="item"><span class="slider"></span></label>Orioles Bat $50.00</td></tr>
+          <tr><td><label class="switch"><input type="checkbox" name="item[]" value="120" onclick="totalPrice()" class="item"><span class="slider"></span></label>Dodgers Jersey $120.00</td></tr>
+          <tr><td><label class="switch"><input type="checkbox" name="item[]" value="150" onclick="totalPrice()" class="item"><span class="slider"></span></label>Astros Jersey $150.00</td></tr>
+          <tr><td>Total price: <input type="text" value="$0.00" name="total" id="total" readonly></td></tr>
+          <tr><td>First Name: <input type="text" name="first_name" onblur="firstCheck()" onfocus="resetFirstName()" id="first" required></td><td><p id="firstCK"></td></tr>
+          <tr><td>Last Name: <input type="text" name="last_name" onblur="lastCheck()" onfocus="resetLastName()" id="last" required></td><td><p id="lastCK"></td></tr>
+          <tr><td>Address: <textarea name="address" cols="40" rows="2" id="address" required></textarea></td></tr>
+          <tr><td>Phone: <input type="text" name="phone" onblur="phoneCheck()" onfocus="resetPhone()" placeholder="123-456-7890" maxlength="12" id="phone" required></td><td><p id="phoneCK"></td></tr>
+          <tr><td>Email: <input type="text" name="email" placeholder="example@hotmail.com" id="email" required></td></tr>
+          <tr><td>Credit Card Type: <input type="radio" name="card" value="Visa" id="cardType">Visa<input type="radio" name="card" value="Mastercard">Mastercard<input type="radio" name="card" value="American Express" required>American Express</td></tr>
+          <tr><td>Credit Card number: <input type="text" name="credit_card" onblur="creditNumCheck()" onfocus="resetCardNum()" placeholder="1111 1111 1111 1111" maxlength="19" id="cardNum" required></td><td><p id="creditNumCK"></td></tr>
+          <tr><td>Credit Card Expiration Date: <input type="text" name="exp_date" onblur="validateExpDate()" onfocus="resetExpDate()" id="expdate" placeholder="Expiration Date" maxlength="7" required></td><td><p id="expDateNum"></td></tr>
+          <tr><td><button type="reset" onclick="getFocus()" class="btn1">Reset</button><button type="submit" class="btn2">Submit</button></td></tr>
+        </table>
+      </form>
+    </section>
+    <div class="foot">
+    <footer> 
+      &copy; 2021 | Rosmar Enriquez | CS 213 Web Engineering
+  </footer>
+</div>
+  </body>
+</html>
